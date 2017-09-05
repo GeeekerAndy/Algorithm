@@ -15,13 +15,14 @@ package newCoder;
 public class NumberOf1Between1AndN {
 
     public static void main(String[] args) {
-        int n = 100;
-        System.out.println(countDigitOne(n));
-        System.out.println(NumberOf1Between1AndN_Solution(n));
+        int n = 101352351;
+        System.out.println(NumberOf1Between1AndN_Solution1(n));
+        System.out.println(NumberOf1Between1AndN_Solution2(n));
+        System.out.println(NumberOf1Between1AndN_Solution3(n));
     }
 
     //Thought of mine.
-    public static int countDigitOne(int n) {
+    public static int NumberOf1Between1AndN_Solution1(int n) {
         int ones = 0;
         for (int i = 1; i <= n; i *= 10) {
             //前缀块
@@ -45,12 +46,32 @@ public class NumberOf1Between1AndN {
     Undone.Trying to figure it out.
     https://discuss.leetcode.com/topic/18054/4-lines-o-log-n-c-java-python
      */
-    public static int NumberOf1Between1AndN_Solution(int n) {
+    public static int NumberOf1Between1AndN_Solution2(int n) {
         int ones = 0;
         for (long m = 1; m <= n; m *= 10) {
             ones += (n / m + 8) / 10 * m + (n / m % 10 == 1 ? n % m + 1 : 0);
         }
         return ones;
+    }
+
+    /*
+    Guangnan Wu give this solution.
+     */
+    public static int NumberOf1Between1AndN_Solution3(int n) {
+        int count = 0;
+        for(int i = 0; i <=n; i++) {
+            int a = i;
+            while(true) {
+                if(a%10 == 1) {
+                    count++;
+                }
+                if(a < 10) {
+                    break;
+                }
+                a /= 10;
+            }
+        }
+        return count;
     }
 }
 
