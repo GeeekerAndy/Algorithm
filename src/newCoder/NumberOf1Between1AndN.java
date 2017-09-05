@@ -1,4 +1,4 @@
-package other;
+package newCoder;
 
 /**
  * 牛客网例题
