@@ -15,7 +15,7 @@ package newCoder;
 public class NumberOf1Between1AndN {
 
     public static void main(String[] args) {
-        int n = 101352351;
+        int n = 1013521;
         System.out.println(NumberOf1Between1AndN_Solution1(n));
         System.out.println(NumberOf1Between1AndN_Solution2(n));
         System.out.println(NumberOf1Between1AndN_Solution3(n));
