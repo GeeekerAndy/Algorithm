@@ -10,7 +10,8 @@ public class Main {
 //        Quick.sort(array);
 //        Selection.sort(array);
 //        MergeBU.sort(array);
-        Shell.sort(array);
+//        Shell.sort(array);
+        Heap.sort(array);
         System.out.println(isSorted(array));
         show(array);
     }
