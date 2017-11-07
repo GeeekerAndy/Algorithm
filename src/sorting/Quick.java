@@ -5,7 +5,7 @@ import static sorting.Tools.less;
 
 public class Quick {
     public static void sort(Comparable[] a) {
-        sort(a, 0, a.length);
+        sort(a, 0, a.length - 1);
     }
     private static void sort(Comparable[] a, int lo, int hi) {
         if(lo >= hi) {
@@ -26,7 +26,7 @@ public class Quick {
                 }
             }
             while(less(a[lo], a[--j])) {
-                if(i == lo) {
+                if(j == lo) {
                     break;
                 }
             }
